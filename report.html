@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report E-Waste - EcoTech</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-recycle"></i> EcoTech</h2>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="calculator.html"><i class="fas fa-calculator"></i> E-Waste Calculator</a></li>
+                <li><a href="locator.html"><i class="fas fa-map-marker-alt"></i> Recycling Centers</a></li>
+                <li><a href="tracker.html"><i class="fas fa-chart-line"></i> Device Tracker</a></li>
+                <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education Hub</a></li>
+                <li><a href="report.html" class="active"><i class="fas fa-exclamation-triangle"></i> Report E-Waste</a></li>
+                <li><a href="stats.html"><i class="fas fa-chart-bar"></i> Global Statistics</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1>Report E-Waste Issues</h1>
+                <p>Help us track and address improper e-waste disposal in your community</p>
+            </header>
+
+            <div class="report-container">
+                <div class="report-types">
+                    <h2>What would you like to report?</h2>
+                    <div class="report-options">
+                        <div class="report-option" onclick="selectReportType('illegal-dumping')">
+                            <i class="fas fa-dumpster"></i>
+                            <h3>Illegal Dumping</h3>
+                            <p>Electronics dumped in unauthorized locations</p>
+                        </div>
+                        
+                        <div class="report-option" onclick="selectReportType('unsafe-disposal')">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <h3>Unsafe Disposal</h3>
+                            <p>Improper handling of hazardous electronic components</p>
+                        </div>
+                        
+                        <div class="report-option" onclick="selectReportType('facility-issue')">
+                            <i class="fas fa-industry"></i>
+                            <h3>Facility Issues</h3>
+                            <p>Problems with recycling centers or collection points</p>
+                        </div>
+                        
+                        <div class="report-option" onclick="selectReportType('educational')">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Awareness Need</h3>
+                            <p>Areas needing better e-waste education and outreach</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="report-form-container" id="reportFormContainer" style="display: none;">
+                    <form class="report-form" id="reportForm">
+                        <h2>Report Details</h2>
+                        
+                        <div class="form-section">
+                            <h3>Location Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="reportAddress">Address or Location</label>
+                                    <input type="text" id="reportAddress" required placeholder="Enter the location where the issue was observed">
+                                </div>
+                                <div class="form-group">
+                                    <label for="reportCity">City</label>
+                                    <input type="text" id="reportCity" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="reportState">State/Province</label>
+                                    <input type="text" id="reportState" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="reportZip">ZIP Code</label>
+                                    <input type="text" id="reportZip" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Issue Details</h3>
+                            <div class="form-group">
+                                <label for="reportDescription">Description of the Issue</label>
+                                <textarea id="reportDescription" rows="4" required placeholder="Please provide detailed information about what you observed..."></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="reportSeverity">Severity Level</label>
+                                <select id="reportSeverity" required>
+                                    <option value="">Select severity</option>
+                                    <option value="low">Low - Minor concern</option>
+                                    <option value="medium">Medium - Noticeable issue</option>
+                                    <option value="high">High - Significant problem</option>
+                                    <option value="critical">Critical - Immediate attention needed</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="reportDevices">Types of Electronics Involved</label>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" value="smartphones"> Smartphones/Tablets</label>
+                                    <label><input type="checkbox" value="computers"> Computers/Laptops</label>
+                                    <label><input type="checkbox" value="appliances"> Home Appliances</label>
+                                    <label><input type="checkbox" value="batteries"> Batteries</label>
+                                    <label><input type="checkbox" value="cables"> Cables/Accessories</label>
+                                    <label><input type="checkbox" value="other"> Other</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Contact Information (Optional)</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="reporterName">Your Name</label>
+                                    <input type="text" id="reporterName" placeholder="For follow-up purposes">
+                                </div>
+                                <div class="form-group">
+                                    <label for="reporterEmail">Email Address</label>
+                                    <input type="email" id="reporterEmail" placeholder="We'll send you updates on your report">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="reporterPhone">Phone Number</label>
+                                <input type="tel" id="reporterPhone" placeholder="Optional - for urgent matters only">
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Additional Information</h3>
+                            <div class="form-group">
+                                <label for="reportPhotos">Photo Evidence</label>
+                                <input type="file" id="reportPhotos" multiple accept="image/*">
+                                <small>Upload photos if available (max 5 files, 10MB each)</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" id="reportAnonymous">
+                                    Submit this report anonymously
+                                </label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" id="reportConsent" required>
+                                    I consent to the processing of this information for environmental protection purposes
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline" onclick="resetReportForm()">Reset Form</button>
+                            <button type="submit" class="btn btn-primary">Submit Report</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Recent Reports -->
+                <div class="recent-reports">
+                    <h2>Recent Community Reports</h2>
+                    <div class="reports-list">
+                        <div class="report-item">
+                            <div class="report-status resolved">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Resolved</span>
+                            </div>
+                            <div class="report-content">
+                                <h4>Illegal E-Waste Dumping - Zone 5</h4>
+                                <p>Large quantity of computers and monitors dumped near industrial area</p>
+                                <div class="report-meta">
+                                    <span><i class="fas fa-calendar"></i> 3 days ago</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Industrial District</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="report-item">
+                            <div class="report-status in-progress">
+                                <i class="fas fa-clock"></i>
+                                <span>In Progress</span>
+                            </div>
+                            <div class="report-content">
+                                <h4>Recycling Center Issues - Downtown</h4>
+                                <p>Collection point overflowing, needs immediate attention</p>
+                                <div class="report-meta">
+                                    <span><i class="fas fa-calendar"></i> 1 week ago</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Downtown Core</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="report-item">
+                            <div class="report-status pending">
+                                <i class="fas fa-hourglass-half"></i>
+                                <span>Pending</span>
+                            </div>
+                            <div class="report-content">
+                                <h4>Educational Outreach Needed - Residential Area</h4>
+                                <p>Many residents unaware of proper e-waste disposal methods</p>
+                                <div class="report-meta">
+                                    <span><i class="fas fa-calendar"></i> 2 weeks ago</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Suburbs West</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="report.js"></script>
+</body>
+</html>

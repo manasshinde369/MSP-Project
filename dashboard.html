@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - EcoTech</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-recycle"></i> EcoTech</h2>
+                <p id="userInfo"></p>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="dashboard.html" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li id="scheduleLink" style="display:none"><a href="schedule.html"><i class="fas fa-calendar-plus"></i> Schedule Pickup</a></li>
+                <li><a href="calculator.html"><i class="fas fa-calculator"></i> E-Waste Calculator</a></li>
+                <li><a href="locator.html"><i class="fas fa-map-marker-alt"></i> Recycling Centers</a></li>
+                <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education Hub</a></li>
+                <li><a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1 id="dashboardTitle">Dashboard</h1>
+                <p id="dashboardSubtitle"></p>
+            </header>
+
+            <!-- Citizen Dashboard -->
+            <div id="citizenDashboard" style="display:none">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon blue">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="citizenPendingCount">0</h3>
+                            <p>Pending Requests</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon green">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="citizenCompletedCount">0</h3>
+                            <p>Completed Pickups</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>My Collection Requests</h2>
+                    <div id="citizenRequests" class="requests-list"></div>
+                </div>
+            </div>
+
+            <!-- Agent Dashboard -->
+            <div id="agentDashboard" style="display:none">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon orange">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="agentAssignedCount">0</h3>
+                            <p>Assigned Pickups</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon green">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="agentCompletedCount">0</h3>
+                            <p>Completed Today</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>My Assigned Pickups</h2>
+                    <div id="agentRequests" class="requests-list"></div>
+                </div>
+            </div>
+
+            <!-- Admin Dashboard -->
+            <div id="adminDashboard" style="display:none">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon blue">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="adminPendingCount">0</h3>
+                            <p>Pending Requests</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon orange">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="adminScheduledCount">0</h3>
+                            <p>Scheduled</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon green">
+                            <i class="fas fa-check-double"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="adminCompletedCount">0</h3>
+                            <p>Completed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>All Collection Requests</h2>
+                    <div id="adminRequests" class="requests-list"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

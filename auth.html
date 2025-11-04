@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - EcoTech</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h1><i class="fas fa-recycle"></i> EcoTech</h1>
+                <p>E-Waste Collection Scheduler</p>
+            </div>
+
+            <!-- Login Form -->
+            <div id="loginForm" class="auth-form">
+                <h2>Login</h2>
+                <form id="loginFormElement">
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                </form>
+                <p class="auth-switch">Don't have an account? <a href="#" id="showRegister">Register</a></p>
+                <div class="demo-credentials">
+                    <p><strong>Demo Accounts:</strong></p>
+                    <p>👤 Citizen: citizen@ewaste.com / citizen123</p>
+                    <p>🚚 Agent: agent@ewaste.com / agent123</p>
+                    <p>👨‍💼 Admin: admin@ewaste.com / admin123</p>
+                </div>
+            </div>
+
+            <!-- Register Form -->
+            <div id="registerForm" class="auth-form" style="display: none;">
+                <h2>Register</h2>
+                <form id="registerFormElement">
+                    <div class="form-group">
+                        <label for="registerName">Full Name</label>
+                        <input type="text" id="registerName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerEmail">Email</label>
+                        <input type="email" id="registerEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword">Password</label>
+                        <input type="password" id="registerPassword" required minlength="6">
+                    </div>
+                    <div class="form-group">
+                        <label for="registerRole">Role</label>
+                        <select id="registerRole" required>
+                            <option value="Citizen">Citizen</option>
+                            <option value="Agent">Collection Agent</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerAddress">Address</label>
+                        <textarea id="registerAddress" rows="2"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPhone">Phone</label>
+                        <input type="tel" id="registerPhone">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Register</button>
+                </form>
+                <p class="auth-switch">Already have an account? <a href="#" id="showLogin">Login</a></p>
+            </div>
+
+            <div id="authMessage" class="auth-message"></div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>

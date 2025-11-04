@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Lifecycle Tracker - EcoTech</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-recycle"></i> EcoTech</h2>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="calculator.html"><i class="fas fa-calculator"></i> E-Waste Calculator</a></li>
+                <li><a href="locator.html"><i class="fas fa-map-marker-alt"></i> Recycling Centers</a></li>
+                <li><a href="tracker.html" class="active"><i class="fas fa-chart-line"></i> Device Tracker</a></li>
+                <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education Hub</a></li>
+                <li><a href="report.html"><i class="fas fa-exclamation-triangle"></i> Report E-Waste</a></li>
+                <li><a href="stats.html"><i class="fas fa-chart-bar"></i> Global Statistics</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1>Device Lifecycle Tracker</h1>
+                <p>Monitor and extend your electronic devices' lifespan</p>
+            </header>
+
+            <div class="tracker-container">
+                <div class="tracker-header">
+                    <button class="btn btn-primary" onclick="openAddDeviceModal()">
+                        <i class="fas fa-plus"></i> Add New Device
+                    </button>
+                    <div class="tracker-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">8</span>
+                            <span class="stat-label">Tracked Devices</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">3.2</span>
+                            <span class="stat-label">Avg. Age (years)</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">85%</span>
+                            <span class="stat-label">Health Score</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="devices-grid">
+                    <div class="device-card">
+                        <div class="device-header">
+                            <div class="device-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="device-info">
+                                <h3>iPhone 13 Pro</h3>
+                                <p>Purchased: Jan 2022</p>
+                            </div>
+                            <div class="device-status excellent">
+                                <span>Excellent</span>
+                            </div>
+                        </div>
+                        
+                        <div class="device-metrics">
+                            <div class="metric">
+                                <label>Age</label>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 35%"></div>
+                                </div>
+                                <span>2.1 years</span>
+                            </div>
+                            <div class="metric">
+                                <label>Battery Health</label>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 89%"></div>
+                                </div>
+                                <span>89%</span>
+                            </div>
+                            <div class="metric">
+                                <label>Performance</label>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 92%"></div>
+                                </div>
+                                <span>92%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="device-actions">
+                            <button class="btn btn-outline">View Details</button>
+                            <button class="btn btn-primary">Update Status</button>
+                        </div>
+                    </div>
+
+                    <div class="device-card">
+                        <div class="device-header">
+                            <div class="device-icon">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                            <div class="device-info">
+                                <h3>MacBook Air M1</h3>
+                                <p>Purchased: Mar 2021</p>
+                            </div>
+                            <div class="device-status good">
+                                <span>Good</span>
+                            </div>
+                        </div>
+                        
+                        <div class="device-metrics">
+                            <div class="metric">
+                                <label>Age</label>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 55%"></div>
+                                </div>
+                                <span>2.8 years</span>
+                            </div>
+                            <div class="metric">
+                                <label>Battery Health</label>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 76%"></div>
+                                </div>
+                                <span>76%</span>
+                            </div>
+                            <div class="metric">
+                                <label>Performance</label>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 88%"></div>
+                                </div>
+                                <span>88%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="device-actions">
+                            <button class="btn btn-outline">View Details</button>
+                            <button class="btn btn-primary">Update Status</button>
+                        </div>
+                    </div>
+
+                    <div class="device-card">
+                        <div class="device-header">
+                            <div class="device-icon">
+                                <i class="fas fa-tablet-alt"></i>
+                            </div>
+                            <div class="device-info">
+                                <h3>iPad Pro 11"</h3>
+                                <p>Purchased: Sep 2020</p>
+                            </div>
+                            <div class="device-status fair">
+                                <span>Fair</span>
+                            </div>
+                        </div>
+                        
+                        <div class="device-metrics">
+                            <div class="metric">
+                                <label>Age</label>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 75%"></div>
+                                </div>
+                                <span>3.4 years</span>
+                            </div>
+                            <div class="metric">
+                                <label>Battery Health</label>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 68%"></div>
+                                </div>
+                                <span>68%</span>
+                            </div>
+                            <div class="metric">
+                                <label>Performance</label>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 72%"></div>
+                                </div>
+                                <span>72%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="device-actions">
+                            <button class="btn btn-outline">View Details</button>
+                            <button class="btn btn-primary">Update Status</button>
+                        </div>
+                    </div>
+
+                    <div class="device-card">
+                        <div class="device-header">
+                            <div class="device-icon">
+                                <i class="fas fa-tv"></i>
+                            </div>
+                            <div class="device-info">
+                                <h3>Samsung 55" QLED</h3>
+                                <p>Purchased: Nov 2019</p>
+                            </div>
+                            <div class="device-status poor">
+                                <span>Poor</span>
+                            </div>
+                        </div>
+                        
+                        <div class="device-metrics">
+                            <div class="metric">
+                                <label>Age</label>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 85%"></div>
+                                </div>
+                                <span>4.2 years</span>
+                            </div>
+                            <div class="metric">
+                                <label>Display Quality</label>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 45%"></div>
+                                </div>
+                                <span>45%</span>
+                            </div>
+                            <div class="metric">
+                                <label>Performance</label>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 38%"></div>
+                                </div>
+                                <span>38%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="device-actions">
+                            <button class="btn btn-outline">View Details</button>
+                            <button class="btn btn-primary">Schedule Repair</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lifecycle-insights">
+                    <h2>Lifecycle Insights</h2>
+                    <div class="insights-grid">
+                        <div class="insight-card">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Optimization Tips</h3>
+                            <ul>
+                                <li>Consider battery replacement for MacBook Air</li>
+                                <li>Schedule TV display calibration</li>
+                                <li>Update software on all devices</li>
+                            </ul>
+                        </div>
+                        <div class="insight-card">
+                            <i class="fas fa-calendar-alt"></i>
+                            <h3>Upcoming Maintenance</h3>
+                            <ul>
+                                <li>iPad Pro: Battery health check (Due: Next week)</li>
+                                <li>iPhone 13: iOS update available</li>
+                                <li>MacBook Air: Cleaning scheduled</li>
+                            </ul>
+                        </div>
+                        <div class="insight-card">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Lifecycle Predictions</h3>
+                            <ul>
+                                <li>iPhone 13: 3+ years remaining</li>
+                                <li>MacBook Air: 2+ years remaining</li>
+                                <li>Samsung TV: Consider replacement soon</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Add Device Modal -->
+    <div class="modal" id="addDeviceModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New Device</h2>
+                <button class="modal-close" onclick="closeAddDeviceModal()">&times;</button>
+            </div>
+            <form id="addDeviceForm">
+                <div class="form-group">
+                    <label for="deviceName">Device Name</label>
+                    <input type="text" id="deviceName" required>
+                </div>
+                <div class="form-group">
+                    <label for="deviceTypeModal">Device Type</label>
+                    <select id="deviceTypeModal" required>
+                        <option value="">Select Type</option>
+                        <option value="smartphone">Smartphone</option>
+                        <option value="laptop">Laptop</option>
+                        <option value="tablet">Tablet</option>
+                        <option value="tv">Television</option>
+                        <option value="gaming">Gaming Console</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="purchaseDate">Purchase Date</label>
+                    <input type="date" id="purchaseDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="initialCondition">Initial Condition</label>
+                    <select id="initialCondition" required>
+                        <option value="excellent">Excellent</option>
+                        <option value="good">Good</option>
+                        <option value="fair">Fair</option>
+                    </select>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-outline" onclick="closeAddDeviceModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add Device</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="tracker.js"></script>
+</body>
+</html>

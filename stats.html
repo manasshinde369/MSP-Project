@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Statistics - EcoTech</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-recycle"></i> EcoTech</h2>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="calculator.html"><i class="fas fa-calculator"></i> E-Waste Calculator</a></li>
+                <li><a href="locator.html"><i class="fas fa-map-marker-alt"></i> Recycling Centers</a></li>
+                <li><a href="tracker.html"><i class="fas fa-chart-line"></i> Device Tracker</a></li>
+                <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education Hub</a></li>
+                <li><a href="report.html"><i class="fas fa-exclamation-triangle"></i> Report E-Waste</a></li>
+                <li><a href="stats.html" class="active"><i class="fas fa-chart-bar"></i> Global Statistics</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1>Global E-Waste Statistics</h1>
+                <p>Real-time data and trends in electronic waste generation and management</p>
+            </header>
+
+            <div class="stats-container">
+                <!-- Key Metrics -->
+                <div class="key-metrics">
+                    <div class="metric-card large">
+                        <div class="metric-header">
+                            <h2>Global E-Waste Generation</h2>
+                            <span class="metric-period">2024 Data</span>
+                        </div>
+                        <div class="metric-value">
+                            <span class="number">62.5</span>
+                            <span class="unit">Million Tons</span>
+                        </div>
+                        <div class="metric-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+8.3% from 2023</span>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-recycle"></i>
+                        </div>
+                        <div class="metric-content">
+                            <h3>22.5%</h3>
+                            <p>Global Recycling Rate</p>
+                            <small>+2.5% improvement</small>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="metric-content">
+                            <h3>$64B</h3>
+                            <p>Lost Material Value</p>
+                            <small>Due to improper disposal</small>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <div class="metric-content">
+                            <h3>195</h3>
+                            <p>Countries Tracked</p>
+                            <small>In our global database</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts Section -->
+                <div class="charts-section">
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>E-Waste Generation by Region</h3>
+                            <div class="chart-controls">
+                                <select id="regionChart">
+                                    <option value="2024">2024</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2022">2022</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="chart-placeholder">
+                            <div class="chart-bars">
+                                <div class="chart-bar">
+                                    <div class="bar" style="height: 85%"></div>
+                                    <label>Asia</label>
+                                    <span>26.2M tons</span>
+                                </div>
+                                <div class="chart-bar">
+                                    <div class="bar" style="height: 45%"></div>
+                                    <label>Europe</label>
+                                    <span>13.8M tons</span>
+                                </div>
+                                <div class="chart-bar">
+                                    <div class="bar" style="height: 40%"></div>
+                                    <label>Americas</label>
+                                    <span>12.1M tons</span>
+                                </div>
+                                <div class="chart-bar">
+                                    <div class="bar" style="height: 20%"></div>
+                                    <label>Africa</label>
+                                    <span>6.2M tons</span>
+                                </div>
+                                <div class="chart-bar">
+                                    <div class="bar" style="height: 15%"></div>
+                                    <label>Oceania</label>
+                                    <span>4.2M tons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>Device Categories Breakdown</h3>
+                        </div>
+                        <div class="chart-placeholder">
+                            <div class="pie-chart">
+                                <div class="pie-segment" style="--percentage: 35; --color: #3B82F6;">
+                                    <span>35%</span>
+                                </div>
+                                <div class="pie-legend">
+                                    <div class="legend-item">
+                                        <div class="legend-color" style="background: #3B82F6;"></div>
+                                        <span>Small IT Equipment (35%)</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-color" style="background: #10B981;"></div>
+                                        <span>Large Equipment (28%)</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-color" style="background: #F59E0B;"></div>
+                                        <span>Temperature Exchange (20%)</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-color" style="background: #EF4444;"></div>
+                                        <span>Screens & Monitors (12%)</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-color" style="background: #8B5CF6;"></div>
+                                        <span>Small Equipment (5%)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trends Section -->
+                <div class="trends-section">
+                    <h2>Key Trends & Insights</h2>
+                    <div class="trends-grid">
+                        <div class="trend-card">
+                            <div class="trend-icon up">
+                                <i class="fas fa-arrow-up"></i>
+                            </div>
+                            <div class="trend-content">
+                                <h3>Mobile Device Waste</h3>
+                                <p>5.3 billion mobile phones will become waste in 2024</p>
+                                <div class="trend-stat">+12% increase from 2023</div>
+                            </div>
+                        </div>
+                        
+                        <div class="trend-card">
+                            <div class="trend-icon up">
+                                <i class="fas fa-arrow-up"></i>
+                            </div>
+                            <div class="trend-content">
+                                <h3>AI Hardware Impact</h3>
+                                <p>GPU and specialized AI chip disposal rising rapidly</p>
+                                <div class="trend-stat">+28% in enterprise sector</div>
+                            </div>
+                        </div>
+                        
+                        <div class="trend-card">
+                            <div class="trend-icon down">
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                            <div class="trend-content">
+                                <h3>Device Lifespan</h3>
+                                <p>Average smartphone lifespan decreased to 2.3 years</p>
+                                <div class="trend-stat">-0.4 years from 2020</div>
+                            </div>
+                        </div>
+                        
+                        <div class="trend-card">
+                            <div class="trend-icon up">
+                                <i class="fas fa-arrow-up"></i>
+                            </div>
+                            <div class="trend-content">
+                                <h3>Recycling Infrastructure</h3>
+                                <p>New certified facilities opened globally</p>
+                                <div class="trend-stat">+156 facilities in 2024</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Country Rankings -->
+                <div class="rankings-section">
+                    <h2>Country Performance Rankings</h2>
+                    <div class="rankings-tabs">
+                        <button class="tab-button active" onclick="showRanking('generation')">Generation per Capita</button>
+                        <button class="tab-button" onclick="showRanking('recycling')">Recycling Rate</button>
+                        <button class="tab-button" onclick="showRanking('policy')">Policy Score</button>
+                    </div>
+                    
+                    <div class="ranking-content active" id="generation">
+                        <div class="ranking-list">
+                            <div class="ranking-item">
+                                <div class="rank">1</div>
+                                <div class="country">
+                                    <img src="https://images.pexels.com/photos/1323712/pexels-photo-1323712.jpeg?auto=compress&cs=tinysrgb&w=40&h=30&fit=crop" alt="Flag">
+                                    <span>Norway</span>
+                                </div>
+                                <div class="value">28.5 kg/person</div>
+                                <div class="change positive">+2.1</div>
+                            </div>
+                            
+                            <div class="ranking-item">
+                                <div class="rank">2</div>
+                                <div class="country">
+                                    <img src="https://images.pexels.com/photos/1323712/pexels-photo-1323712.jpeg?auto=compress&cs=tinysrgb&w=40&h=30&fit=crop" alt="Flag">
+                                    <span>Iceland</span>
+                                </div>
+                                <div class="value">26.8 kg/person</div>
+                                <div class="change positive">+1.8</div>
+                            </div>
+                            
+                            <div class="ranking-item">
+                                <div class="rank">3</div>
+                                <div class="country">
+                                    <img src="https://images.pexels.com/photos/1323712/pexels-photo-1323712.jpeg?auto=compress&cs=tinysrgb&w=40&h=30&fit=crop" alt="Flag">
+                                    <span>Switzerland</span>
+                                </div>
+                                <div class="value">25.3 kg/person</div>
+                                <div class="change neutral">0.0</div>
+                            </div>
+                            
+                            <div class="ranking-item">
+                                <div class="rank">4</div>
+                                <div class="country">
+                                    <img src="https://images.pexels.com/photos/1323712/pexels-photo-1323712.jpeg?auto=compress&cs=tinysrgb&w=40&h=30&fit=crop" alt="Flag">
+                                    <span>Denmark</span>
+                                </div>
+                                <div class="value">24.9 kg/person</div>
+                                <div class="change positive">+1.2</div>
+                            </div>
+                            
+                            <div class="ranking-item">
+                                <div class="rank">5</div>
+                                <div class="country">
+                                    <img src="https://images.pexels.com/photos/1323712/pexels-photo-1323712.jpeg?auto=compress&cs=tinysrgb&w=40&h=30&fit=crop" alt="Flag">
+                                    <span>Luxembourg</span>
+                                </div>
+                                <div class="value">23.7 kg/person</div>
+                                <div class="change negative">-0.8</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Predictions -->
+                <div class="predictions-section">
+                    <h2>Future Projections</h2>
+                    <div class="prediction-cards">
+                        <div class="prediction-card">
+                            <div class="prediction-year">2030</div>
+                            <div class="prediction-value">74.7M tons</div>
+                            <div class="prediction-label">Projected E-Waste Generation</div>
+                            <div class="prediction-trend">
+                                <i class="fas fa-arrow-up"></i>
+                                19% increase from 2024
+                            </div>
+                        </div>
+                        
+                        <div class="prediction-card">
+                            <div class="prediction-year">2025</div>
+                            <div class="prediction-value">35%</div>
+                            <div class="prediction-label">Target Recycling Rate</div>
+                            <div class="prediction-trend">
+                                <i class="fas fa-target"></i>
+                                UN SDG Target
+                            </div>
+                        </div>
+                        
+                        <div class="prediction-card">
+                            <div class="prediction-year">2027</div>
+                            <div class="prediction-value">$150B</div>
+                            <div class="prediction-label">Circular Economy Value</div>
+                            <div class="prediction-trend">
+                                <i class="fas fa-coins"></i>
+                                Market opportunity
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="stats.js"></script>
+</body>
+</html>

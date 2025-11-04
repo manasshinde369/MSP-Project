@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Hub - EcoTech</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-recycle"></i> EcoTech</h2>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="calculator.html"><i class="fas fa-calculator"></i> E-Waste Calculator</a></li>
+                <li><a href="locator.html"><i class="fas fa-map-marker-alt"></i> Recycling Centers</a></li>
+                <li><a href="tracker.html"><i class="fas fa-chart-line"></i> Device Tracker</a></li>
+                <li><a href="education.html" class="active"><i class="fas fa-graduation-cap"></i> Education Hub</a></li>
+                <li><a href="report.html"><i class="fas fa-exclamation-triangle"></i> Report E-Waste</a></li>
+                <li><a href="stats.html"><i class="fas fa-chart-bar"></i> Global Statistics</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1>E-Waste Education Hub</h1>
+                <p>Learn about sustainable electronic waste management and circular economy</p>
+            </header>
+
+            <div class="education-container">
+                <!-- Featured Content -->
+                <div class="featured-section">
+                    <h2>Featured Learning Path</h2>
+                    <div class="featured-card">
+                        <div class="featured-image">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div class="featured-content">
+                            <h3>Complete E-Waste Management Course</h3>
+                            <p>Comprehensive 8-module course covering everything from device lifecycle to recycling technologies</p>
+                            <div class="course-stats">
+                                <span><i class="fas fa-clock"></i> 4 hours</span>
+                                <span><i class="fas fa-users"></i> 1,247 enrolled</span>
+                                <span><i class="fas fa-star"></i> 4.8/5</span>
+                            </div>
+                            <button class="btn btn-primary">Start Learning</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Learning Categories -->
+                <div class="categories-section">
+                    <h2>Learning Categories</h2>
+                    <div class="categories-grid">
+                        <div class="category-card">
+                            <i class="fas fa-recycle"></i>
+                            <h3>Recycling Basics</h3>
+                            <p>Fundamental concepts of e-waste recycling and material recovery</p>
+                            <span class="lesson-count">12 lessons</span>
+                        </div>
+                        
+                        <div class="category-card">
+                            <i class="fas fa-leaf"></i>
+                            <h3>Environmental Impact</h3>
+                            <p>Understanding the environmental consequences of electronic waste</p>
+                            <span class="lesson-count">8 lessons</span>
+                        </div>
+                        
+                        <div class="category-card">
+                            <i class="fas fa-cogs"></i>
+                            <h3>Circular Economy</h3>
+                            <p>Design for reuse, repair, and sustainable manufacturing</p>
+                            <span class="lesson-count">10 lessons</span>
+                        </div>
+                        
+                        <div class="category-card">
+                            <i class="fas fa-gavel"></i>
+                            <h3>Regulations & Policy</h3>
+                            <p>Legal frameworks and international standards for e-waste management</p>
+                            <span class="lesson-count">6 lessons</span>
+                        </div>
+                        
+                        <div class="category-card">
+                            <i class="fas fa-industry"></i>
+                            <h3>Technology Solutions</h3>
+                            <p>Advanced recycling technologies and innovation in waste processing</p>
+                            <span class="lesson-count">15 lessons</span>
+                        </div>
+                        
+                        <div class="category-card">
+                            <i class="fas fa-users"></i>
+                            <h3>Community Action</h3>
+                            <p>How individuals and communities can make a difference</p>
+                            <span class="lesson-count">9 lessons</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Facts -->
+                <div class="facts-section">
+                    <h2>Did You Know?</h2>
+                    <div class="facts-grid">
+                        <div class="fact-card">
+                            <div class="fact-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="fact-content">
+                                <h3>5.3 Billion</h3>
+                                <p>Mobile phones will be thrown away in 2022, enough to form a tower 50,000km high</p>
+                            </div>
+                        </div>
+                        
+                        <div class="fact-card">
+                            <div class="fact-icon">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <div class="fact-content">
+                                <h3>$57 Billion</h3>
+                                <p>Worth of precious metals lost each year due to improper e-waste disposal</p>
+                            </div>
+                        </div>
+                        
+                        <div class="fact-card">
+                            <div class="fact-icon">
+                                <i class="fas fa-globe-americas"></i>
+                            </div>
+                            <div class="fact-content">
+                                <h3>80%</h3>
+                                <p>Of global e-waste is not formally collected and recycled</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resources -->
+                <div class="resources-section">
+                    <h2>Educational Resources</h2>
+                    <div class="resources-tabs">
+                        <button class="tab-button active" onclick="showTab('articles')">Articles</button>
+                        <button class="tab-button" onclick="showTab('videos')">Videos</button>
+                        <button class="tab-button" onclick="showTab('infographics')">Infographics</button>
+                        <button class="tab-button" onclick="showTab('guides')">Guides</button>
+                    </div>
+                    
+                    <div class="tab-content active" id="articles">
+                        <div class="resource-list">
+                            <div class="resource-item">
+                                <div class="resource-meta">
+                                    <span class="resource-type">Article</span>
+                                    <span class="resource-time">5 min read</span>
+                                </div>
+                                <h3>The Hidden Cost of Our Digital Lives</h3>
+                                <p>Exploring the environmental impact of our increasing reliance on electronic devices and digital services.</p>
+                                <div class="resource-tags">
+                                    <span class="tag">Environmental Impact</span>
+                                    <span class="tag">Digital Footprint</span>
+                                </div>
+                            </div>
+                            
+                            <div class="resource-item">
+                                <div class="resource-meta">
+                                    <span class="resource-type">Article</span>
+                                    <span class="resource-time">8 min read</span>
+                                </div>
+                                <h3>Circular Design: Electronics for the Future</h3>
+                                <p>How manufacturers are designing products for better recyclability and longer lifespans.</p>
+                                <div class="resource-tags">
+                                    <span class="tag">Circular Economy</span>
+                                    <span class="tag">Design</span>
+                                </div>
+                            </div>
+                            
+                            <div class="resource-item">
+                                <div class="resource-meta">
+                                    <span class="resource-type">Article</span>
+                                    <span class="resource-time">6 min read</span>
+                                </div>
+                                <h3>Right to Repair: A Global Movement</h3>
+                                <p>Understanding the right to repair movement and its impact on reducing electronic waste.</p>
+                                <div class="resource-tags">
+                                    <span class="tag">Policy</span>
+                                    <span class="tag">Repair</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="videos">
+                        <div class="resource-list">
+                            <div class="resource-item">
+                                <div class="resource-meta">
+                                    <span class="resource-type">Video</span>
+                                    <span class="resource-time">12 minutes</span>
+                                </div>
+                                <h3>Inside an E-Waste Recycling Facility</h3>
+                                <p>A documentary-style tour of a modern e-waste processing facility showing advanced recycling technologies.</p>
+                                <div class="resource-tags">
+                                    <span class="tag">Recycling</span>
+                                    <span class="tag">Technology</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="infographics">
+                        <div class="resource-list">
+                            <div class="resource-item">
+                                <div class="resource-meta">
+                                    <span class="resource-type">Infographic</span>
+                                    <span class="resource-time">Visual</span>
+                                </div>
+                                <h3>E-Waste by the Numbers</h3>
+                                <p>Visual representation of global e-waste statistics and trends over the past decade.</p>
+                                <div class="resource-tags">
+                                    <span class="tag">Statistics</span>
+                                    <span class="tag">Global Trends</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="guides">
+                        <div class="resource-list">
+                            <div class="resource-item">
+                                <div class="resource-meta">
+                                    <span class="resource-type">Guide</span>
+                                    <span class="resource-time">Step-by-step</span>
+                                </div>
+                                <h3>How to Properly Dispose of Electronics</h3>
+                                <p>Complete guide on preparing and disposing of various electronic devices safely and responsibly.</p>
+                                <div class="resource-tags">
+                                    <span class="tag">Disposal</span>
+                                    <span class="tag">How-to</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="education.js"></script>
+</body>
+</html>

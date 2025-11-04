@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Waste Calculator - EcoTech</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-recycle"></i> EcoTech</h2>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="calculator.html" class="active"><i class="fas fa-calculator"></i> E-Waste Calculator</a></li>
+                <li><a href="locator.html"><i class="fas fa-map-marker-alt"></i> Recycling Centers</a></li>
+                <li><a href="tracker.html"><i class="fas fa-chart-line"></i> Device Tracker</a></li>
+                <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education Hub</a></li>
+                <li><a href="report.html"><i class="fas fa-exclamation-triangle"></i> Report E-Waste</a></li>
+                <li><a href="stats.html"><i class="fas fa-chart-bar"></i> Global Statistics</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1>E-Waste Impact Calculator</h1>
+                <p>Calculate the environmental impact of your electronic devices</p>
+            </header>
+
+            <div class="calculator-container">
+                <div class="calculator-form">
+                    <h2>Device Information</h2>
+                    <form id="ewasteForm">
+                        <div class="form-group">
+                            <label for="deviceType">Device Type</label>
+                            <select id="deviceType" required>
+                                <option value="">Select Device Type</option>
+                                <option value="smartphone">Smartphone</option>
+                                <option value="laptop">Laptop</option>
+                                <option value="desktop">Desktop Computer</option>
+                                <option value="tablet">Tablet</option>
+                                <option value="tv">Television</option>
+                                <option value="gaming">Gaming Console</option>
+                                <option value="appliance">Home Appliance</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="deviceAge">Device Age (years)</label>
+                            <input type="number" id="deviceAge" min="0" max="20" step="0.5" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="deviceCondition">Current Condition</label>
+                            <select id="deviceCondition" required>
+                                <option value="">Select Condition</option>
+                                <option value="excellent">Excellent (Like New)</option>
+                                <option value="good">Good (Minor Wear)</option>
+                                <option value="fair">Fair (Some Issues)</option>
+                                <option value="poor">Poor (Major Issues)</option>
+                                <option value="broken">Broken/Non-functional</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="usageHours">Daily Usage Hours</label>
+                            <input type="number" id="usageHours" min="0" max="24" step="0.5" required>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Calculate Impact</button>
+                    </form>
+                </div>
+
+                <div class="calculator-results" id="calculatorResults" style="display: none;">
+                    <h2>Environmental Impact Assessment</h2>
+                    
+                    <div class="result-card">
+                        <div class="result-header">
+                            <i class="fas fa-leaf"></i>
+                            <h3>Carbon Footprint</h3>
+                        </div>
+                        <div class="result-value">
+                            <span id="carbonFootprint">--</span> kg CO₂
+                        </div>
+                        <div class="result-comparison">
+                            Equivalent to <span id="carbonComparison">--</span> km of car travel
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="result-header">
+                            <i class="fas fa-battery-three-quarters"></i>
+                            <h3>Remaining Lifespan</h3>
+                        </div>
+                        <div class="result-value">
+                            <span id="remainingLife">--</span> years
+                        </div>
+                        <div class="result-comparison">
+                            Based on current usage patterns
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="result-header">
+                            <i class="fas fa-recycle"></i>
+                            <h3>Recycling Value</h3>
+                        </div>
+                        <div class="result-value">
+                            $<span id="recyclingValue">--</span>
+                        </div>
+                        <div class="result-comparison">
+                            Estimated material recovery value
+                        </div>
+                    </div>
+                    
+                    <div class="recommendations">
+                        <h3>Recommendations</h3>
+                        <ul id="recommendationsList">
+                            <!-- Recommendations will be populated by JS -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="calculator.js"></script>
+</body>
+</html>

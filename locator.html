@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycling Centers Locator - EcoTech</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-recycle"></i> EcoTech</h2>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="calculator.html"><i class="fas fa-calculator"></i> E-Waste Calculator</a></li>
+                <li><a href="locator.html" class="active"><i class="fas fa-map-marker-alt"></i> Recycling Centers</a></li>
+                <li><a href="tracker.html"><i class="fas fa-chart-line"></i> Device Tracker</a></li>
+                <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education Hub</a></li>
+                <li><a href="report.html"><i class="fas fa-exclamation-triangle"></i> Report E-Waste</a></li>
+                <li><a href="stats.html"><i class="fas fa-chart-bar"></i> Global Statistics</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1>Recycling Centers Locator</h1>
+                <p>Find certified e-waste recycling facilities near you</p>
+            </header>
+
+            <div class="locator-container">
+                <div class="search-section">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="locationSearch" placeholder="Enter your location or ZIP code">
+                        <button class="btn btn-primary" onclick="searchLocation()">Search</button>
+                    </div>
+                    
+                    <div class="filter-options">
+                        <div class="filter-group">
+                            <label>Distance</label>
+                            <select id="distanceFilter">
+                                <option value="5">Within 5 miles</option>
+                                <option value="10" selected>Within 10 miles</option>
+                                <option value="25">Within 25 miles</option>
+                                <option value="50">Within 50 miles</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label>Device Type</label>
+                            <select id="deviceFilter">
+                                <option value="all">All Devices</option>
+                                <option value="smartphones">Smartphones</option>
+                                <option value="computers">Computers</option>
+                                <option value="appliances">Appliances</option>
+                                <option value="batteries">Batteries</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label>Services</label>
+                            <select id="serviceFilter">
+                                <option value="all">All Services</option>
+                                <option value="pickup">Pickup Available</option>
+                                <option value="dropoff">Drop-off Only</option>
+                                <option value="refurbish">Refurbishment</option>
+                                <option value="certified">Certified Only</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-section">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map"></i>
+                        <p>Interactive Map</p>
+                        <small>Map integration would show recycling center locations</small>
+                    </div>
+                    
+                    <div class="centers-list">
+                        <h3>Nearby Recycling Centers</h3>
+                        
+                        <div class="center-card">
+                            <div class="center-header">
+                                <h4>TechRecycle Solutions</h4>
+                                <div class="center-rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="rating-text">4.8 (127 reviews)</span>
+                                </div>
+                            </div>
+                            <div class="center-details">
+                                <p><i class="fas fa-map-marker-alt"></i> 123 Green Street, Downtown, NY 10001</p>
+                                <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                                <p><i class="fas fa-clock"></i> Mon-Fri: 8AM-6PM, Sat: 9AM-4PM</p>
+                                <p><i class="fas fa-truck"></i> Pickup available, Certified R2/e-Stewards</p>
+                            </div>
+                            <div class="center-services">
+                                <span class="service-tag">Smartphones</span>
+                                <span class="service-tag">Computers</span>
+                                <span class="service-tag">Appliances</span>
+                                <span class="service-tag">Batteries</span>
+                            </div>
+                            <div class="center-actions">
+                                <button class="btn btn-outline">Get Directions</button>
+                                <button class="btn btn-primary">Schedule Pickup</button>
+                            </div>
+                        </div>
+                        
+                        <div class="center-card">
+                            <div class="center-header">
+                                <h4>EcoRecover Center</h4>
+                                <div class="center-rating">
+                                    <span class="stars">★★★★☆</span>
+                                    <span class="rating-text">4.2 (89 reviews)</span>
+                                </div>
+                            </div>
+                            <div class="center-details">
+                                <p><i class="fas fa-map-marker-alt"></i> 456 Recycle Avenue, Midtown, NY 10002</p>
+                                <p><i class="fas fa-phone"></i> (555) 987-6543</p>
+                                <p><i class="fas fa-clock"></i> Mon-Sat: 9AM-5PM, Sun: Closed</p>
+                                <p><i class="fas fa-recycle"></i> Drop-off only, EPA Certified</p>
+                            </div>
+                            <div class="center-services">
+                                <span class="service-tag">Computers</span>
+                                <span class="service-tag">TVs</span>
+                                <span class="service-tag">Gaming</span>
+                            </div>
+                            <div class="center-actions">
+                                <button class="btn btn-outline">Get Directions</button>
+                                <button class="btn btn-primary">View Details</button>
+                            </div>
+                        </div>
+                        
+                        <div class="center-card">
+                            <div class="center-header">
+                                <h4>Green Electronics Hub</h4>
+                                <div class="center-rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="rating-text">4.9 (203 reviews)</span>
+                                </div>
+                            </div>
+                            <div class="center-details">
+                                <p><i class="fas fa-map-marker-alt"></i> 789 Sustainability Blvd, Uptown, NY 10003</p>
+                                <p><i class="fas fa-phone"></i> (555) 456-7890</p>
+                                <p><i class="fas fa-clock"></i> Mon-Sun: 7AM-7PM</p>
+                                <p><i class="fas fa-tools"></i> Refurbishment services, R2 Certified</p>
+                            </div>
+                            <div class="center-services">
+                                <span class="service-tag">All Devices</span>
+                                <span class="service-tag">Refurbishment</span>
+                                <span class="service-tag">Data Destruction</span>
+                            </div>
+                            <div class="center-actions">
+                                <button class="btn btn-outline">Get Directions</button>
+                                <button class="btn btn-primary">Schedule Visit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="locator.js"></script>
+</body>
+</html>
